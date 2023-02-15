@@ -5,7 +5,7 @@ import Dashboard from "../components/admin/right/Dashboard";
 import DeleteMyProduct from "../components/admin/right/Products/DeleteMyProduct";
 import DeleteSellerProduct from "../components/admin/right/Products/DeleteSellerProduct";
 import DeleverProduct from "../components/admin/right/DeleverProduct/DeleverProduct";
-import Products from "../components/admin/right/products/AllProducts";
+import Products from "../components/admin/right/Products/AllProducts";
 import AllSellers from "../components/admin/right/AllSellers/AllSellers";
 import AllUsers from "../components/admin/right/AllUsers/AllUsers";
 import axios from "axios";
