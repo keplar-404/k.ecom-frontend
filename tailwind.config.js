@@ -8,7 +8,7 @@ module.exports = {
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./public/**/*.html",
-  ],
+  ], 
   theme: {
     screens: {
       'sm': '640px',
