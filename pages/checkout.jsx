@@ -42,6 +42,8 @@ function checkout() {
 
   return (
     <>
+    <div className="flex justify-center items-center">
+
       <div className="container flex items-center justify-center w-full h-full mt-36 gap-x-14 px-14">
         <div className="w-1/2 h-96">
           <p className="text-lg font-bold text-center bold">Your item</p>
@@ -55,6 +57,7 @@ function checkout() {
           <Right />
         </div>
       </div>
+    </div>
     </>
   );
 }

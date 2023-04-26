@@ -49,23 +49,25 @@ function cartPage() {
   if (cartDetails === null) {
     return (
       <>
-        <div className="pt-12">
-          <p className="pb-12 text-xl text-center">Cart details</p>
-          <div className="container px-16 overflow-y-scroll h-96">
-            <Table>
-              <Table.Head className="text-center">
-                <Table.HeadCell>Product Image</Table.HeadCell>
-                <Table.HeadCell>Name</Table.HeadCell>
-                <Table.HeadCell>Category</Table.HeadCell>
-                <Table.HeadCell>Quentity</Table.HeadCell>
-                <Table.HeadCell>Price</Table.HeadCell>
-                <Table.HeadCell>Delete</Table.HeadCell>
-              </Table.Head>
-            </Table>
-            <p className="text-2xl text-center">Loading</p>
-          </div>
-          <div className="flex items-center justify-center mt-10">
-            <Button className="px-12">Confirm order</Button>
+        <div className="flex justify-center items-center">
+          <div className="pt-12">
+            <p className="pb-12 text-xl text-center">Cart details</p>
+            <div className="container px-16 overflow-y-scroll h-96">
+              <Table>
+                <Table.Head className="text-center">
+                  <Table.HeadCell>Product Image</Table.HeadCell>
+                  <Table.HeadCell>Name</Table.HeadCell>
+                  <Table.HeadCell>Category</Table.HeadCell>
+                  <Table.HeadCell>Quentity</Table.HeadCell>
+                  <Table.HeadCell>Price</Table.HeadCell>
+                  <Table.HeadCell>Delete</Table.HeadCell>
+                </Table.Head>
+              </Table>
+              <p className="text-2xl text-center">Loading</p>
+            </div>
+            <div className="flex items-center justify-center mt-10">
+              <Button className="px-12">Confirm order</Button>
+            </div>
           </div>
         </div>
       </>
@@ -146,53 +148,64 @@ function cartPage() {
     window.localStorage.removeItem("totalprice");
     window.localStorage.removeItem("cartDetails");
 
-    const finalCartDetails = JSON.parse(window.localStorage.getItem('finalCartDetails'))
-    const realFinalCartDetails = JSON.parse(window.localStorage.getItem('realFinalAllCartDetails')) || []
-    const newRealFinalCartDetails = [...realFinalCartDetails, ...finalCartDetails]
-    window.localStorage.setItem('realFinalAllCartDetails', JSON.stringify(newRealFinalCartDetails))
-    
-    setCartLength(0)
+    const finalCartDetails = JSON.parse(
+      window.localStorage.getItem("finalCartDetails")
+    );
+    const realFinalCartDetails =
+      JSON.parse(window.localStorage.getItem("realFinalAllCartDetails")) || [];
+    const newRealFinalCartDetails = [
+      ...realFinalCartDetails,
+      ...finalCartDetails,
+    ];
+    window.localStorage.setItem(
+      "realFinalAllCartDetails",
+      JSON.stringify(newRealFinalCartDetails)
+    );
+
+    setCartLength(0);
     router.push("/checkout");
   };
   return (
     <>
-      <div className="pt-12">
-        <p className="pb-12 text-xl text-center">Cart details</p>
-        <div className="container px-16 overflow-y-scroll h-96">
-          <Table>
-            <Table.Head className="text-center">
-              <Table.HeadCell>Product Image</Table.HeadCell>
-              <Table.HeadCell>Name</Table.HeadCell>
-              <Table.HeadCell>Category</Table.HeadCell>
-              <Table.HeadCell>Quentity</Table.HeadCell>
-              <Table.HeadCell>Price</Table.HeadCell>
-              <Table.HeadCell>Delete</Table.HeadCell>
-            </Table.Head>
-            {cartDetails.map((data) => (
-              <Cart
-                key={data._id}
-                data={data}
-                deleteHandler={deleteHandler}
-                handleSubTotalPrice={handleSubTotalPrice}
-              />
-            ))}
-          </Table>
-        </div>
-        <div className="flex flex-col items-center justify-center mt-10 gap-y-3">
-          <p className="text-xl">
-            Total: $<span id="p">{total}</span>
-          </p>
-          <Button
-            className="px-12"
-            onClick={checkout}
-            disabled={cartDetails == "" ? true : false}
-          >
-            {cartDetails == "" ? (
-              <p>You do not have any item to order</p>
-            ) : (
-              "Checkout"
-            )}
-          </Button>
+      <div className="flex justify-center items-center">
+        <div className="pt-12">
+          <p className="pb-12 text-xl text-center">Cart details</p>
+          <div className="container px-16 overflow-y-scroll h-96">
+            <Table>
+              <Table.Head className="text-center">
+                <Table.HeadCell>Product Image</Table.HeadCell>
+                <Table.HeadCell>Name</Table.HeadCell>
+                <Table.HeadCell>Category</Table.HeadCell>
+                <Table.HeadCell>Quentity</Table.HeadCell>
+                <Table.HeadCell>Price</Table.HeadCell>
+                <Table.HeadCell>Delete</Table.HeadCell>
+              </Table.Head>
+              {cartDetails.map((data) => (
+                <Cart
+                  key={data._id}
+                  data={data}
+                  deleteHandler={deleteHandler}
+                  handleSubTotalPrice={handleSubTotalPrice}
+                />
+              ))}
+            </Table>
+          </div>
+          <div className="flex flex-col items-center justify-center mt-10 gap-y-3">
+            <p className="text-xl">
+              Total: $<span id="p">{total}</span>
+            </p>
+            <Button
+              className="px-12"
+              onClick={checkout}
+              disabled={cartDetails == "" ? true : false}
+            >
+              {cartDetails == "" ? (
+                <p>You do not have any item to order</p>
+              ) : (
+                "Checkout"
+              )}
+            </Button>
+          </div>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ function AllProducts({ data, addToCartHandler }) {
 
   return (
     <>
-      <div className="h-auto w-60">
+      <div className="h-auto w-56">
         <Card
           imgAlt={name}
           imgSrc={images[0]}

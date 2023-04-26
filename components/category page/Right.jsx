@@ -28,7 +28,7 @@ function Right({ data, itemsPerPage, addToCartHandler }) {
         activeLinkClassName="a"
         className="flex mb-10 text-lg gap-x-6 text-slate-500 "
       />
-      <div className="grid grid-cols-4 gap-y-6">
+      <div className="w-full grid grid-cols-4 gap-x-3">
         {currentItems.map((data) => (
           <AllProducts
             key={data._id}
