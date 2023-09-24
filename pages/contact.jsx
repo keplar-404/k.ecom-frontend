@@ -1,5 +1,6 @@
 import { Label, TextInput, Textarea, Button } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
+import { GoThreeBars } from "react-icons/go";
 import { toast } from "react-toastify";
 
 function contact() {
@@ -9,7 +10,7 @@ function contact() {
       autoClose: 2000,
       type: "success",
     });
-  }
+  };
   return (
     <>
       <div className="flex justify-center items-center">
@@ -41,7 +42,9 @@ function contact() {
                 rows={4}
               />
             </div>
-            <Button onClick={submit} className="w-full mt-4">Submit</Button>
+            <Button onClick={submit} className="w-full mt-4">
+              Submit
+            </Button>
           </div>
         </div>
       </div>
