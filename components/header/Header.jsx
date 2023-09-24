@@ -100,7 +100,7 @@ function Header({ cart, logedin }) {
                 Home
               </Link>
               <Link href={"/category"} className="hover:text-blue-600">
-                Category
+                All products
               </Link>
               <Link href={"/contact"} className="hover:text-blue-600">
                 Contact

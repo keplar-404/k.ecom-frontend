@@ -6,7 +6,7 @@ import { BsFacebook, BsGithub, BsTwitter, BsInstagram, BsDribbble } from 'react-
 function Footerc() {
     return ( 
         <>
-        <Footer bgDark={true}>
+        <Footer bgDark={true} className="mt-[5rem]">
   <div className="w-full">
     <div className=" flex flex-row justify-center items-center w-full gap-x-80 mb-2 md:grid-cols-4 bg-slate-50">
       <div>

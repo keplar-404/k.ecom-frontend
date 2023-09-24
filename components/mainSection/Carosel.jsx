@@ -15,23 +15,23 @@ function Carosel() {
           <Carousel>
             <Image
               src={none}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="s1"
             />
             <Image
               src={shone}
-              height={4000}
-              width={4000}
-              className=""
+              height={250}
+              width={250}
+              className="w-full"
               alt="t1"
             />
             <Image
               src={head1}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="h1"
             />
           </Carousel>
@@ -39,23 +39,23 @@ function Carosel() {
           <Carousel indicators={false} className="mt-10">
             <Image
               src={niketwo}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="s2"
             />
             <Image
               src={girlone}
-              height={1000}
-              width={2000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="t2"
             />
             <Image
               src={head2}
-              height={1000}
-              width={2000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="h2"
             />
           </Carousel>
