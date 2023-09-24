@@ -6,7 +6,6 @@ import {
   BsInstagram,
   BsDribbble,
 } from "react-icons/bs";
-import { GoThreeBars } from "react-icons/go";
 
 function Footerc() {
   return (

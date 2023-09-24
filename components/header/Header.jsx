@@ -1,7 +1,6 @@
 import { Navbar, Avatar, Dropdown } from "flowbite-react";
 import Link from "next/link";
 import { FaShoppingCart } from "react-icons/fa";
-import { GoThreeBars } from "react-icons/go";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { auth } from "../../firebase/Authentication";

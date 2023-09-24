@@ -1,6 +1,5 @@
 import { Label, TextInput, Textarea, Button } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
-import { GoThreeBars } from "react-icons/go";
 import { toast } from "react-toastify";
 
 function contact() {
