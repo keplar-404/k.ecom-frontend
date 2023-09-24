@@ -9,7 +9,7 @@ function contact() {
       autoClose: 2000,
       type: "success",
     });
-  };
+  }
   return (
     <>
       <div className="flex justify-center items-center">
@@ -41,9 +41,7 @@ function contact() {
                 rows={4}
               />
             </div>
-            <Button onClick={submit} className="w-full mt-4">
-              Submit
-            </Button>
+            <Button onClick={submit} className="w-full mt-4">Submit</Button>
           </div>
         </div>
       </div>

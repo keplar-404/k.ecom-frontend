@@ -5,25 +5,7 @@ import tt4 from "../../public/img/tt4.png";
 import t5 from "../../public/img/t5.png";
 import Image from "next/image";
 
-function ServicesComponent({ name, img, bg_color }) {
-  return (
-    <>
-      <div className="flex flex-col items-center justify-center bg-white py-8 px-12 rounded-xl drop-shadow-lg">
-        <br />
-        <Image
-          src={img}
-          width={120}
-          height={120}
-          alt="f5"
-          className="w-auto h-20"
-        />
-        <br />
-        <p className={`mt-4 px-2 text-blue-600 rounded ${bg_color}`}>{name}</p>
-        <br />
-      </div>
-    </>
-  );
-}
+
 
 function Services() {
   const service = [
@@ -58,10 +40,9 @@ function Services() {
       bg_color: "bg-lime-300",
     },
   ];
-
   return (
     <>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center">
         <div className="container flex flex-row items-center justify-center gap-24 mt-36">
           {service.map((data) => (
             <ServicesComponent
@@ -72,6 +53,26 @@ function Services() {
             />
           ))}
         </div>
+      </div>
+    </>
+  );
+}
+
+function ServicesComponent({ name, img, bg_color }) {
+  return (
+    <>
+      <div className="flex flex-col items-center justify-center bg-white py-8 px-12 rounded-xl drop-shadow-lg">
+        <br />
+        <Image
+          src={img}
+          width={120}
+          height={120}
+          alt="f5"
+          className="w-auto h-20"
+        />
+        <br />
+        <p className={`mt-4 px-2 text-blue-600 rounded ${bg_color}`}>{name}</p>
+        <br />
       </div>
     </>
   );

@@ -12,7 +12,7 @@ function Carosel() {
     <>
       <div className="w-full flex justify-center items-center flex-row">
         <div className="container grid h-56 grid-cols-2 gap-4 pt-16 px-11 sm:h-64 xl:h-80 2xl:h-96">
-          <Carousel>
+        <Carousel>
             <Image
               src={none}
               height={250}
