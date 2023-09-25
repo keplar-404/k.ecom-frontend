@@ -1,24 +1,30 @@
-import Products from "./Products";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button } from "flowbite-react";
 import Link from "next/link";
+import { CartContext } from "../../../pages/_app"
 
 function FeatureProducts() {
   const [topProduct, setTopProduct] = useState(null);
+  const { addToCartHandler } = useContext(CartContext);
   useEffect(() => {
-    axios.get("https://k-ecom.onrender.com/products/allproducts").then((data) => {
-      const allProducts = data.data.data;
-      const AllProduct = allProducts.map((data) => {
-        if (data.rating >= 4) return data;
+    axios
+      .get("https://k-ecom.onrender.com/products/allproducts")
+      .then((data) => {
+        const allProducts = data.data.data;
+        const AllProduct = allProducts.map((data) => {
+          const rate =
+            data.rating.reduce((acc, value) => acc + value, 0) /
+            data.rating.length;
+          if (rate >= 4) return data;
+        });
+        const filteredProduct = AllProduct.filter((data) => {
+          if (data !== undefined) return data;
+        });
+        const fouritem = filteredProduct.slice(0, 5);
+        //   console.log(filteredProduct);
+        setTopProduct(fouritem);
       });
-      const filteredProduct = AllProduct.filter((data) => {
-        if (data !== undefined) return data;
-      });
-      const fouritem = filteredProduct.slice(0, 5);
-      //   console.log(filteredProduct);
-      setTopProduct(fouritem);
-    });
   }, []);
   return (
     <>
@@ -29,11 +35,15 @@ function FeatureProducts() {
       <div className="grid grid-cols-5 px-12 mt-6 gap-7 gap-y-8">
         {topProduct === null
           ? ""
-          : topProduct.map((data) => <Products key={data._id} data={data} />)}
+          : topProduct.map((data) =>  <AllProducts
+          key={data._id}
+          data={data}
+          addToCartHandler={addToCartHandler}
+        />)}
       </div>
       <div className="flex items-center justify-center mt-8">
         <Link href={"/category"}>
-          <Button className="px-12">Show all</Button>
+          <Button className="px-12">See all</Button>
         </Link>
       </div>
     </>

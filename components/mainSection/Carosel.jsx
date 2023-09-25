@@ -12,26 +12,26 @@ function Carosel() {
     <>
       <div className="w-full flex justify-center items-center flex-row">
         <div className="container grid h-56 grid-cols-2 gap-4 pt-16 px-11 sm:h-64 xl:h-80 2xl:h-96">
-          <Carousel>
+        <Carousel>
             <Image
               src={none}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="s1"
             />
             <Image
               src={shone}
-              height={4000}
-              width={4000}
-              className=""
+              height={250}
+              width={250}
+              className="w-full"
               alt="t1"
             />
             <Image
               src={head1}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="h1"
             />
           </Carousel>
@@ -39,23 +39,23 @@ function Carosel() {
           <Carousel indicators={false} className="mt-10">
             <Image
               src={niketwo}
-              height={4000}
-              width={4000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="s2"
             />
             <Image
               src={girlone}
-              height={1000}
-              width={2000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="t2"
             />
             <Image
               src={head2}
-              height={1000}
-              width={2000}
-              className="w-fit"
+              height={250}
+              width={250}
+              className="w-full"
               alt="h2"
             />
           </Carousel>

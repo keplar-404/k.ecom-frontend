@@ -2,7 +2,7 @@ import Link from "next/link";
 function SpecialOffer() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center mx-11 mt-14">
+      <div className="flex flex-col items-center justify-center mx-11 mt-[5rem]">
         <p className="text-4xl text-center">Special Offer for Winter</p>
         <hr className="w-2/5 h-1 mt-1 bg-gray-300 rounded-xl" />
         <div className="flex flex-row w-full gap-x-5 mt-7">

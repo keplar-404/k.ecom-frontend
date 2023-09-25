@@ -1,4 +1,3 @@
-import Header from "../components/header/Header";
 import Carosel from "../components/mainSection/Carosel";
 import Discount from "../components/mainSection/Discount4";
 import FeatureProducts from "../components/mainSection/Featured Products 3/FeatureProducts3";
@@ -10,8 +9,6 @@ function Home() {
   return (
     <>
     <div className="overflow-x-hidden bg-slate-50 ">
-
-      {/* <Header /> */}
       <Carosel/>
       <Services/>
       <FeatureProducts/>

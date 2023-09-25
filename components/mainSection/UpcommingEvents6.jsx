@@ -14,39 +14,34 @@ function UpcommingEvents() {
           <Timeline.Item>
             <Timeline.Point />
             <Timeline.Content>
-              <Timeline.Time>February 2023</Timeline.Time>
+              <Timeline.Time>February 2024</Timeline.Time>
               <Timeline.Title>
-                Application UI code in Tailwind CSS
+              Big sales on mobile shop
               </Timeline.Title>
               <Timeline.Body>
-                Get access to over 20+ pages including a dashboard layout,
-                charts, kanban board, calendar, and pre-order E-commerce &
-                Marketing pages.
+              Get access to over 90+ mobile product including especial gift to make you festival more engaging and joyfull with discount offer up to 55%.
               </Timeline.Body>
             </Timeline.Content>
           </Timeline.Item>
           <Timeline.Item>
             <Timeline.Point />
             <Timeline.Content>
-              <Timeline.Time>March 2023</Timeline.Time>
-              <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+              <Timeline.Time>March 2024</Timeline.Time>
+              <Timeline.Title>Early access to new products</Timeline.Title>
               <Timeline.Body>
-                All of the pages and components are first designed in Figma and
-                we keep a parity between the two versions even as we update the
-                project.
+              All of new comming products early access with big discount.
               </Timeline.Body>
             </Timeline.Content>
           </Timeline.Item>
           <Timeline.Item>
             <Timeline.Point />
             <Timeline.Content>
-              <Timeline.Time>April 2023</Timeline.Time>
+              <Timeline.Time>April 2024</Timeline.Time>
               <Timeline.Title>
-                E-Commerce UI code in Tailwind CSS
+              Happy shopping
               </Timeline.Title>
               <Timeline.Body>
-                Get started with dozens of web components and interactive
-                elements built on top of Tailwind CSS.
+              Get ready for 24th year verciray surprize. Keep on eyes on. Something big is comming.
               </Timeline.Body>
             </Timeline.Content>
           </Timeline.Item>
